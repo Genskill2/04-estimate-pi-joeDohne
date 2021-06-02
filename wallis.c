@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <math.h>
 
+#define M_PI 3.14159265358979323846
+
 float wallis_pi(int);
 
 int main(void) {
@@ -22,5 +24,14 @@ int main(void) {
       abort();
     }
   }
+}
+
+float wallis_pi(int n){
+  float s = 1;
+  for (int i=1; i<=n; i++){
+    s *= (4*i*i)/(4*i*i - 1.0); //explicit type conversion
+  }
+
+  return 2*s;
 }
 
