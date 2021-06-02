@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <math.h>
 
-#define M_PI 3.14159265358979323846
-
 float mc_pi(int);
 
 float frandom() {
@@ -56,7 +54,5 @@ float mc_pi(int n){
       in_circle++;
     }
   }
-  return 4*(in_circle/total*1.0);
+  return 4.0*in_circle/total;
 }
-
-
